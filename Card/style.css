@@ -1,0 +1,36 @@
+.card {
+  width: 266px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+li {
+  border: solid 0.5px #848d95;
+  padding: 10px;
+}
+
+li:not(:first-child) {
+  margin-top: -1px;
+}
+
+li:last-child {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+a {
+  padding-right: 20px;
+}
