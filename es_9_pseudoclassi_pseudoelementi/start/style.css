@@ -25,10 +25,14 @@ p::first-letter {
   margin: 8px;
 }
 
+a:visited:hover {
+  color: rgb(216, 19, 216);
+}
+
 a:hover {
-  color: blue;
+  color: yellowgreen;
 }
 
 a:visited {
-  color: blueviolet;
+  color: blue;
 }
