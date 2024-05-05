@@ -1,0 +1,69 @@
+body {
+  background-color: #9b9d9f;
+}
+
+nav {
+  display: flex;
+  padding-left: 20px;
+  align-items: center;
+  background-color: #222529;
+}
+
+h1 {
+  color: white;
+}
+ul {
+  display: flex;
+}
+
+.home {
+  color: white;
+}
+li {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+a {
+  color: #9b9d9f;
+  text-decoration: none;
+}
+
+input {
+  margin-left: 50px;
+  height: 25px;
+  border-radius: 5px;
+}
+
+.disabled {
+  border: 0cap;
+  background-color: inherit;
+  color: #5a5c5f;
+}
+
+select {
+  background-image: url(freccina.png);
+  border: none;
+}
+
+.search {
+  margin-left: 20px;
+  height: 25px;
+  border-radius: 5px;
+  border-color: #1b8654;
+  color: #1b8654;
+  background-color: #222529;
+  border-style: solid;
+}
+
+input[type="search"]::placeholder {
+  padding-left: 10px;
+  opacity: 0.8;
+}
+
+.banda {
+  width: 100%;
+  background-color: white;
+  height: 3px;
+  margin-top: auto;
+}
