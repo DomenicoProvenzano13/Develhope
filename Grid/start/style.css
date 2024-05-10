@@ -1,0 +1,64 @@
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-auto-columns: auto;
+  grid-template-areas:
+    "screen screen screen screen"
+    "bottoni1 bottoni1 bottoni1 bottoni1"
+    "bottoni2 bottoni2 bottoni2 equal"
+    "bottoni2 bottoni2 bottoni2 equal"
+    "bottoni2 bottoni2 bottoni2 equal"
+    "bottoni2 bottoni2 bottoni2 equal";
+  /*per il riempimento della grid, per quel che concerne gli elementi senza "grid-area,
+  ho sfruttato l'autofill degli elementi elencati in ordine nel file html. 
+  i "bottoni1" e "bottoni2" nella grid-template-areas sono solo per riferimento visivo.
+  
+  Altra soluzione, sicuramente più precisa sarebbe quella di assegnare ad ogni <div> 
+  una classe  alla quale assegnare un preciso grid-area da inserire nella 
+  grid-template-areas, ma appunto ho voluto procedere con la realizzazione dell'esercizio 
+  sfruttando la capacità di autofill degli elementi*/
+  border-radius: 10px;
+  border: solid black 2px;
+  width: 330px;
+  gap: 1px;
+  padding: 10px;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  padding: 10px 10px;
+  font-weight: bolder;
+  font-size: 24px;
+}
+
+.screen {
+  display: flex;
+  background-color: #424c52;
+  color: white;
+  padding-right: 15px;
+  justify-content: end;
+  grid-area: screen;
+}
+
+.bottoni1 {
+  background-color: #d2dce3;
+}
+
+.bottoni2 {
+  background-color: #eff2f5;
+}
+
+.equal {
+  background-color: #f77077;
+  grid-area: equal;
+  align-items: center;
+}
+
+.bottoni1,
+.bottoni2,
+.equal {
+  flex: 1;
+  text-align: center;
+}
