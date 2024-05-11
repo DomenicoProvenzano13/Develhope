@@ -1,0 +1,104 @@
+main {
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  margin: 20px auto;
+  gap: 30px;
+}
+
+.header {
+  background-color: #b0b0b0;
+  height: 60px;
+  width: 300px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.pallino {
+  background-color: white;
+  height: 45px;
+  width: 45px;
+  border-radius: 100%;
+  margin-left: 10px;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 30%;
+}
+
+.user {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.date {
+  margin: 0;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+.dots {
+}
+
+.avatar {
+  width: 300px;
+  display: block;
+}
+
+.footer-card {
+  background-color: #dbdbdb;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: auto;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.buttons {
+  display: flex;
+  padding: 5px;
+}
+
+.icons {
+  margin-left: 15px;
+  margin-top: 15px;
+  width: 20px;
+  align-items: center;
+}
+
+.comments {
+  margin: 10px 10px 50px 10px;
+  text-align: justify;
+  line-height: 1;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    margin: 20px auto;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    margin: 20px auto;
+    gap: 30px;
+  }
+}
