@@ -5,7 +5,7 @@ aside {
   align-items: center;
   gap: 20px;
   background-color: antiquewhite;
-  height: 100vw;
+  height: 750px;
 }
 
 .logo {
@@ -33,4 +33,12 @@ a:hover {
 
 .avatar {
   width: 150px;
+}
+
+.name {
+  text-align: center;
+}
+
+.fondo {
+  margin-top: auto;
 }

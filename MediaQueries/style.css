@@ -1,10 +1,9 @@
 main {
-  width: 50%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
-  margin: 20px auto;
   gap: 30px;
+  justify-content: start;
 }
 
 .header {
@@ -80,12 +79,11 @@ main {
 
 @media screen and (max-width: 768px) {
   main {
-    width: 50%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
-    margin: 20px auto;
     gap: 30px;
+    justify-content: start;
   }
 }
 
@@ -95,7 +93,7 @@ main {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: auto;
-    margin: 20px auto;
     gap: 30px;
+    justify-content: start;
   }
 }

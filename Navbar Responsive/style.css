@@ -73,28 +73,27 @@ input[type="search"]::placeholder {
   color: white;
   margin: 10px;
   font-size: 30px;
-}
-
-.menu-icon:hover {
-  cursor: pointer;
-  font-size: 34px;
-  color: red;
+  display: none;
 }
 
 @media (max-width: 768px) {
-  h1 {
-    display: none;
-  }
-
-  ul {
-    display: none;
-  }
-
-  .search {
-    display: none;
-  }
-
+  h1,
+  ul,
+  .search,
   input[type="search"] {
     display: none;
+  }
+
+  .menu-icon {
+    color: white;
+    margin: 10px;
+    font-size: 30px;
+    display: flex;
+  }
+
+  .menu-icon:hover {
+    cursor: pointer;
+    font-size: 34px;
+    color: red;
   }
 }

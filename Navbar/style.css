@@ -54,6 +54,12 @@ select {
   color: #1b8654;
   background-color: #222529;
   border-style: solid;
+  cursor: pointer;
+}
+
+.search:hover {
+  background-color: #1b8654;
+  color: white;
 }
 
 input[type="search"]::placeholder {
