@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .theme {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Dark Mode</h1>
+    <div>
+      <button class="btn">Dark Mode</button>
+    </div>
+    <script>
+      const body = document.querySelector("body"); //creo variabile che punta al body
+      const button = document.querySelector(".btn"); //cre variabile che punta all'elemento con classe btn
+
+      // inizializzo metodo addEventListener dove i parametrisono il "click" e l'evento, parte la funzione.
+      // classList.add è il metodo che serve ad aggiungere una classe alla variabile creata, la classe inserita non ha bisogno del punto
+      button.addEventListener("click", (event) => {
+        body.classList.add("theme");
+      });
+    </script>
+  </body>
+</html>
