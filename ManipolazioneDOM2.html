@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">
+      <form>
+        <div>
+          <label>First Name:</label>
+          <input type="text" class="form-input" id="firstName" value="Mario" />
+        </div>
+        <div>
+          <label>Last Name:</label>
+          <input type="text" class="form-input" id="lastName" value="Rossi" />
+        </div>
+        <div>
+          <label>Age:</label>
+          <input type="number" class="form-input" id="age" value="25" />
+        </div>
+      </form>
+    </div>
+
+    <script>
+      const data = document.querySelectorAll(".form-input"); //creo variabile data e punto ad ogni elemento con classe "form-input"
+      const person = {}; //creo una variabile vuota di tipo oggett
+
+      //utilizzo il metodo forEach per inizializzare una funzione che mi permette di aggiungere alla variabile person ogni elemento chiave-valore
+      data.forEach(function (element) {
+        person[element.id] = element.value;
+      });
+
+      console.log(person);
+
+      //creo variabile form che punta all'elemento <form> e per mezzo del metodo setAttribute imposto il nuovo attributo
+      const form = document.querySelector("form");
+      form.setAttribute("data-person", JSON.stringify(person)); //i parametri del setAttribute sono ("nome dell'attributo", "valore dell'attributo")
+
+      console.log(form.getAttribute("data-person"));
+    </script>
+  </body>
+</html>
