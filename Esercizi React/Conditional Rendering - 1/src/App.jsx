@@ -1,4 +1,5 @@
 import { AlertClock } from "./AlertClock";
+import { Counter } from "./Counter";
 import { HelloWorld } from "./HelloWorld";
 import { Welcome } from "./Welcome";
 
@@ -11,6 +12,8 @@ export function App() {
       <AlertClock />
       <hr />
       <HelloWorld />
+      <hr />
+      <Counter initialValue={42} />
     </div>
   );
 }
