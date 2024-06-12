@@ -2,6 +2,7 @@ import { AlertClock } from "./AlertClock";
 import { Clock } from "./Clock";
 import { Counter } from "./Counter";
 import { HelloWorld } from "./HelloWorld";
+import { MouseClicker } from "./MouseClicker";
 import { Welcome } from "./Welcome";
 
 export default function App() {
@@ -17,6 +18,8 @@ export default function App() {
       <Counter initialValue={42} />
       <hr />
       <Clock />
+      <hr />
+      <MouseClicker />
     </>
   );
 }
