@@ -6,6 +6,7 @@ import { Welcome } from "./components/Welcome";
 import { AlertClock } from "./components/AlertClock";
 import { ControlledForm } from "./components/ControlledForm";
 import { UncontrolledForm } from "./components/UncontrolledForm";
+import FocusableInput from "./components/FocusableInput";
 
 export default function App() {
   return (
@@ -26,6 +27,8 @@ export default function App() {
       <ControlledForm />
       <hr />
       <UncontrolledForm />
+      <hr />
+      <FocusableInput />
     </>
   );
 }
