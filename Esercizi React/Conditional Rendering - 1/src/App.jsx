@@ -1,9 +1,11 @@
-import { AlertClock } from "./AlertClock";
-import { Clock } from "./Clock";
-import { Counter } from "./Counter";
-import { HelloWorld } from "./HelloWorld";
-import { MouseClicker } from "./MouseClicker";
-import { Welcome } from "./Welcome";
+import { Clock } from "./components/Clock";
+import { Counter } from "./components/Counter";
+import { HelloWorld } from "./components/HelloWorld";
+import { MouseClicker } from "./components/MouseClicker";
+import { Welcome } from "./components/Welcome";
+import { AlertClock } from "./components/AlertClock";
+import { ControlledForm } from "./components/ControlledForm";
+import { UncontrolledForm } from "./components/UncontrolledForm";
 
 export default function App() {
   return (
@@ -20,6 +22,10 @@ export default function App() {
       <Clock />
       <hr />
       <MouseClicker />
+      <hr />
+      <ControlledForm />
+      <hr />
+      <UncontrolledForm />
     </>
   );
 }
