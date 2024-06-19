@@ -7,6 +7,7 @@ import { AlertClock } from "./components/AlertClock";
 import { ControlledForm } from "./components/ControlledForm";
 import { UncontrolledForm } from "./components/UncontrolledForm";
 import FocusableInput from "./components/FocusableInput";
+import { Colors } from "./components/Colors";
 
 export default function App() {
   return (
@@ -29,6 +30,14 @@ export default function App() {
       <UncontrolledForm />
       <hr />
       <FocusableInput />
+      <hr />
+      <Colors
+        colors={[
+          { id: 1, name: "Blue" },
+          { id: 2, name: "Red" },
+          { id: 3, name: "Green" },
+        ]}
+      />
     </>
   );
 }
