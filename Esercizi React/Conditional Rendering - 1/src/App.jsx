@@ -12,7 +12,7 @@ import { TodoList } from "./components/TodoList";
 
 export default function App() {
   return (
-    <>
+    <div>
       <h1>My new App</h1>
       <hr />
       <Welcome name="John" age={45} />
@@ -41,6 +41,6 @@ export default function App() {
       />
       <hr />
       <TodoList />
-    </>
+    </div>
   );
 }
