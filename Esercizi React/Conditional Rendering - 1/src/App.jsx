@@ -8,6 +8,7 @@ import { ControlledForm } from "./components/ControlledForm";
 import { UncontrolledForm } from "./components/UncontrolledForm";
 import FocusableInput from "./components/FocusableInput";
 import { Colors } from "./components/Colors";
+import { TodoList } from "./components/TodoList";
 
 export default function App() {
   return (
@@ -38,6 +39,8 @@ export default function App() {
           { id: 3, name: "Green" },
         ]}
       />
+      <hr />
+      <TodoList />
     </>
   );
 }
