@@ -2,3 +2,13 @@
   background-color: beige;
   border: 2px solid black;
 }
+
+.app {
+  background-color: white;
+  border: 2px solid red;
+  padding: 2px;
+}
+
+.app-content-hidden {
+  display: none;
+}

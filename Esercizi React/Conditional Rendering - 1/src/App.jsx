@@ -9,13 +9,14 @@ import { UncontrolledForm } from "./components/UncontrolledForm";
 import FocusableInput from "./components/FocusableInput";
 import { Colors } from "./components/Colors";
 import { TodoList } from "./components/TodoList";
+import { Container } from "./components/Container";
 
 export default function App() {
   return (
-    <div>
-      <h1>My new App</h1>
+    <Container title={<h1>My new App</h1>}>
       <hr />
       <Welcome name="John" age={45} />
+      <hr />
       <AlertClock />
       <hr />
       <HelloWorld />
@@ -41,6 +42,7 @@ export default function App() {
       />
       <hr />
       <TodoList />
-    </div>
+      <hr />
+    </Container>
   );
 }
