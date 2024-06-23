@@ -12,6 +12,7 @@ import { TodoList } from "./components/TodoList";
 import { Container } from "./components/Container";
 import { LanguageContext } from "./components/LanguageContext";
 import { useState } from "react";
+import { SrcGithubUsers } from "./components/SrcGithubUsers";
 
 export function App() {
   const [language, setLanguage] = useState("it");
@@ -56,6 +57,7 @@ export function App() {
           <hr />
           <TodoList />
           <hr />
+          <SrcGithubUsers />
         </LanguageContext.Provider>
       </Container>
     </div>
