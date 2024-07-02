@@ -26,7 +26,6 @@ export function App() {
     <div>
       <button onClick={() => handleSetLanguage("en")}>ENG</button>
       <button onClick={() => handleSetLanguage("it")}>ITA</button>
-
       <Container title={<h1>My new App</h1>}>
         <LanguageContext.Provider value={language}>
           <hr />
