@@ -14,8 +14,7 @@ import { LanguageContext } from "./components/LanguageContext";
 import { useState } from "react";
 import { SrcGithubUser } from "./components/SrcGithubUser";
 import { CurrentLocation } from "./components/CurrentLocation";
-import { Route, Routes } from "react-router-dom";
-/*import { GithubUser } from "./components/GitHubUser";*/
+import { Link, Route, Routes } from "react-router-dom";
 import { ShowGithubUser } from "./components/ShowGithubUser";
 
 export function App() {
@@ -31,6 +30,9 @@ export function App() {
       <button onClick={() => handleSetLanguage("it")}>ITA</button>
       <Container title={<h1>My new App</h1>}>
         <LanguageContext.Provider value={language}>
+          <Link to="/">Home |</Link>
+          <Link to="/counter">Counter |</Link>
+          <Link to="/users/DomenicoProvenzano13">Users |</Link>
           <hr />
           <Routes>
             <Route path="/" element={<Welcome name="John" age={45} />} />
