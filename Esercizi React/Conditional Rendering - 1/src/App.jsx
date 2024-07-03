@@ -12,8 +12,11 @@ import { TodoList } from "./components/TodoList";
 import { Container } from "./components/Container";
 import { LanguageContext } from "./components/LanguageContext";
 import { useState } from "react";
-import { SrcGithubUsers } from "./components/SrcGithubUsers";
+import { SrcGithubUser } from "./components/SrcGithubUser";
 import { CurrentLocation } from "./components/CurrentLocation";
+import { Route, Routes } from "react-router-dom";
+/*import { GithubUser } from "./components/GitHubUser";*/
+import { ShowGithubUser } from "./components/ShowGithubUser";
 
 export function App() {
   const [language, setLanguage] = useState("it");
@@ -29,13 +32,15 @@ export function App() {
       <Container title={<h1>My new App</h1>}>
         <LanguageContext.Provider value={language}>
           <hr />
-          <Welcome name="John" age={45} />
+          <Routes>
+            <Route path="/" element={<Welcome name="John" age={45} />} />
+            <Route path="/counter" element={<Counter initialValue={42} />} />
+            <Route path="/users/:username" element={<ShowGithubUser />} />
+          </Routes>
           <hr />
           <AlertClock />
           <hr />
           <HelloWorld />
-          <hr />
-          <Counter initialValue={42} />
           <hr />
           <Clock />
           <hr />
@@ -57,7 +62,7 @@ export function App() {
           <hr />
           <TodoList />
           <hr />
-          <SrcGithubUsers />
+          <SrcGithubUser />
           <hr />
           <CurrentLocation />
         </LanguageContext.Provider>

@@ -42,7 +42,7 @@ export function SrcGithubUsers(username) {
 } */
 
 import { useRef, useState } from "react";
-import { GithubUser } from "./GitHubUsers";
+import { GithubUser } from "./GitHubUser";
 
 export function SrcGithubUsers() {
   const [users, setUsers] = useState([]);
