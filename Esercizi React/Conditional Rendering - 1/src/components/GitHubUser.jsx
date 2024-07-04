@@ -2,7 +2,7 @@ import { useGithubUser } from "./hooks/useGithubUser";
 import { useRef, useState } from "react";
 
 export function GithubUser({ username }) {
-  const { data, loading, error } = useGithubUser(username);
+  const { data, loading, error, update } = useGithubUser(username);
   const [finduser, setFinduser] = useState(null);
 
   const inputRef = useRef(null);
@@ -11,6 +11,13 @@ export function GithubUser({ username }) {
     <div>
       <button onClick={() => setFinduser(inputRef.current.value)}>
         <input ref={inputRef} placeholder="Cerca" />
+      </button>
+      <button
+        onClick={() => {
+          update;
+        }}
+      >
+        Update
       </button>
       {loading && <h1>Loading...</h1>}
       {error && <h2>{error.message}</h2>}
