@@ -1,15 +1,17 @@
 import { useGithubUser } from "./hooks/useGithubUser";
+import { useRef, useState } from "react";
 
 export function GithubUser({ username }) {
-  const { data, loading, error, onFetchUser } = useGithubUser(username);
+  const { data, loading, error } = useGithubUser(username);
+  const [finduser, setFinduser] = useState(null);
 
-  function handleGetUserData() {
-    onFetchUser(username);
-  }
+  const inputRef = useRef(null);
 
   return (
     <div>
-      <button onClick={handleGetUserData}>Load user data</button>
+      <button onClick={() => setFinduser(inputRef.current.value)}>
+        <input ref={inputRef} placeholder="Cerca" />
+      </button>
       {loading && <h1>Loading...</h1>}
       {error && <h2>{error.message}</h2>}
       {data && (
