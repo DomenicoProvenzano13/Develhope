@@ -16,6 +16,7 @@ import { SrcGithubUser } from "./components/SrcGithubUser";
 import { CurrentLocation } from "./components/CurrentLocation";
 import { Link, Route, Routes } from "react-router-dom";
 import { ShowGithubUser } from "./components/ShowGithubUser";
+import { GithubUserList } from "./components/GithubUserList";
 
 export function App() {
   const [language, setLanguage] = useState("it");
@@ -32,12 +33,16 @@ export function App() {
         <LanguageContext.Provider value={language}>
           <Link to="/">Home |</Link>
           <Link to="/counter">Counter |</Link>
-          <Link to="/users/DomenicoProvenzano13">Users |</Link>
+          <Link to="/user/DomenicoProvenzano13">User |</Link>
+          <Link to="/users">Users |</Link>
           <hr />
           <Routes>
             <Route path="/" element={<Welcome name="John" age={45} />} />
             <Route path="/counter" element={<Counter initialValue={42} />} />
-            <Route path="/users/:username" element={<ShowGithubUser />} />
+            <Route path="/users/" element={<GithubUserList />}>
+              <Route path=":username" element={<ShowGithubUser />} />
+            </Route>
+            <Route path="*" element={<h1>Not Found</h1>} />
           </Routes>
           <hr />
           <AlertClock />
