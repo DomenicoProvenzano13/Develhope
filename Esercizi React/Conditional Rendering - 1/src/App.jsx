@@ -40,6 +40,7 @@ export function App() {
             <Route path="/" element={<Welcome name="John" age={45} />} />
             <Route path="/counter" element={<Counter initialValue={42} />} />
             <Route path="/users/" element={<GithubUserList />}>
+              <Route index element={<h2>Seleziona un profilo</h2>} />
               <Route path=":username" element={<ShowGithubUser />} />
             </Route>
             <Route path="*" element={<h1>Not Found</h1>} />
