@@ -14,7 +14,7 @@ export function GithubUser({ username }) {
       </button>
       <button
         onClick={() => {
-          update;
+          update();
         }}
       >
         Update
