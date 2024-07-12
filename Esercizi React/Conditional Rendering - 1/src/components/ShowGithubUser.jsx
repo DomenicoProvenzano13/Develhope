@@ -3,5 +3,5 @@ import { GithubUser } from "./GitHubUser";
 
 export function ShowGithubUser() {
   const { username } = useParams();
-  return <GithubUser username={username} />;
+  return <GithubUser initialUsername={username} />;
 }

@@ -1,31 +1,24 @@
 import { useGithubUser } from "./hooks/useGithubUser";
 import { useRef, useState } from "react";
 
-export function GithubUser({ username }) {
-  const { data, loading, error, update } = useGithubUser(username);
-  const [finduser, setFinduser] = useState(null);
+export function GithubUser({ initialUsername }) {
+  const [finduser, setFinduser] = useState(initialUsername || "");
+  const { data, loading, error, update } = useGithubUser(finduser);
 
   const inputRef = useRef(null);
 
   return (
     <div>
-      <button onClick={() => setFinduser(inputRef.current.value)}>
-        <input ref={inputRef} placeholder="Cerca" />
-      </button>
-      <button
-        onClick={() => {
-          update();
-        }}
-      >
-        Update
-      </button>
+      <input ref={inputRef} placeholder="Cerca" />
+      <button onClick={() => setFinduser(inputRef.current.value)}>Cerca</button>
+      <button onClick={update}>Update</button>
       {loading && <h1>Loading...</h1>}
       {error && <h2>{error.message}</h2>}
       {data && (
         <>
           <h1>{data.name}</h1>
           <h2>{data.login}</h2>
-          <img src={data.avatar_url} style={{ width: "50px" }}></img>
+          <img src={data.avatar_url} style={{ width: "50px" }} alt="Avatar" />
         </>
       )}
     </div>
