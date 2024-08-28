@@ -5,7 +5,7 @@ CREATE TABLE Books (
     genre TEXT NOT NULL,
     published_year INTEGER NOT NULL,
     isbn TEXT(13) NOT NULL UNIQUE,
-    price INTEGER CHECK (price >= 0),
-    rating INTEGER DEFAULT 0 CHECK (rating >= 0 AND rating <= 5),
-    stock_count INTEGER DEFAULT 0,
+    price REAL CHECK (price >= 0),
+    rating REAL DEFAULT 0 CHECK (rating >= 0 AND rating <= 5),
+    stock_count INTEGER DEFAULT 0
 )
